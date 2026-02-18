@@ -291,13 +291,13 @@
       var link = document.getElementById('ctaLink');
       if (!link) return;
       var finalParams = new URLSearchParams();
-      var sub2 = params.get('sub2');
-      if (sub2) {
-        var v = sub2.toLowerCase();
-        var key = (v.indexOf('ca') === 0 || v.indexOf('feng12') === 0) ? 'aff_sub3' : 'sub2';
-        finalParams.set(key, sub2);
+      var sub1 = params.get('sub1');
+      if (sub1) {
+        var v = sub1.toLowerCase();
+        var key = (v.indexOf('ca') === 0 || v.indexOf('feng12') === 0) ? 'aff_sub3' : 'sub1';
+        finalParams.set(key, sub1);
       }
-      ['s1', 's2', 's3'].forEach(function(k) {
+      ['sub1', 'sub2', 'sub3'].forEach(function(k) {
         var v = params.get(k);
         if (v) finalParams.set(k, v);
       });
@@ -309,3 +309,6 @@
   </script>
 </body>
 </html>
+
+
+
